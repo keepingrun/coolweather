@@ -1,0 +1,11 @@
+<litepal>
+    <!--数据库会在首次执行任意数据库操作的时候自动创建-->
+    <dbname value="cool_weather"/>
+    <version value="1"/>
+    <list>
+        <!--映射三张表,最后需要在manifest文件配置LitePalApplication-->
+        <mapping class="com.example.coolweather.db.Province"/>
+        <mapping class="com.example.coolweather.db.City"/>
+        <mapping class="com.example.coolweather.db.County"/>
+    </list>
+</litepal>
