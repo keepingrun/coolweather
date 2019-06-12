@@ -1,8 +1,14 @@
 # coolweather
-jsonÔÚÏß½âÎöÆ½Ì¨:https://www.json.cn/
-http://guolin.tech/api/china  ÖĞ¹úÊ¡·İ
-http://guolin.tech/api/china/16  Ê¡·İµÄ³ÇÊĞ
-http://guolin.tech/api/china/16/116 ÏØ»òÇø
-http://guolin.tech/api/weather/register ×¢²á
-http://guolin.tech/api/weather?cityid=CN101190401&key=babd1a56e23944fdbd0ef928bf372c90 »ñÈ¡ºÍ·çÌìÆøµÄÊı¾İ
+
+# jsonåœ¨çº¿è§£æå¹³å°:https://www.json.cn/
+
+# http://guolin.tech/api/china  ä¸­å›½çœä»½
+
+# http://guolin.tech/api/china/16  çœä»½çš„åŸå¸‚
+
+# http://guolin.tech/api/china/16/116 å¿æˆ–åŒº
+
+# http://guolin.tech/api/weather/register æ³¨å†Œ
+
+# http://guolin.tech/api/weather?cityid=CN101190401&key=babd1a56e23944fdbd0ef928bf372c90 è·å–å’Œé£å¤©æ°”çš„æ•°æ®
  
