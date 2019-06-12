@@ -6,10 +6,13 @@ import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
@@ -32,8 +35,11 @@ import okhttp3.Response;
  * 天气界面Activity
  */
 public class WeatherActivity extends AppCompatActivity {
+    public DrawerLayout drawer_layout;
+    private Button nav_button;
+
     //下拉刷新
-    private SwipeRefreshLayout swipe_refresh;
+    public SwipeRefreshLayout swipe_refresh;
     private ImageView bing_pic_img;
     private final String getImg_url="http://guolin.tech/api/bing_pic";
 
@@ -128,7 +134,7 @@ public class WeatherActivity extends AppCompatActivity {
     }
 
     //根据weather_id请求数据
-    private void requestWeather(final String weatherId) {
+    public void requestWeather(final String weatherId) {
         String weatherUrl="http://guolin.tech/api/weather?cityid="+weatherId+"&key=babd1a56e23944fdbd0ef928bf372c90";
        HttpUtil.sendOkHttpRequest(weatherUrl, new Callback() {
            @Override
@@ -218,5 +224,15 @@ public class WeatherActivity extends AppCompatActivity {
         sportText=findViewById(R.id.sport_text);
         bing_pic_img=findViewById(R.id.bing_pic_img);
         swipe_refresh=findViewById(R.id.swipe_refresh);
+
+        drawer_layout=findViewById(R.id.drawer_layout);
+        nav_button=findViewById(R.id.nav_button);
+        nav_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //打开滑动菜单
+                drawer_layout.openDrawer(GravityCompat.START);
+            }
+        });
     }
 }
